@@ -1,7 +1,7 @@
 #password validator
-#password must have at least
+#Prompt Password
 password=input('Enter password: ')
-
+#checking valid password indicators
 def validator(input):
 	if hasUppercase(input):
 		print('hasUppercase check')
@@ -27,9 +27,7 @@ def validator(input):
 	    print('Password is valid')
 	else:
 	    print('Password invalid')    
-
-	#elif hasUppercase(input) and hasLowercase(input) and hasSpecialcharacter(input) and hasNumber(input) and has8Characters(input) is not True:
-
+#Password must have at least:	
 #1 uppercase character
 def hasUppercase(input):
     for character in input:
@@ -42,7 +40,7 @@ def hasLowercase(input):
  			return True
 #1 special character
 def hasSpecialcharacter(input):
-	specialCharacter=['!','@','#','$','%','^','&','*','(',')','-','_','+','=']
+	specialCharacter=['!','@','#','$','%','^','&','*','(',')','-','_','+','=','?','/','>','<',':',';',"'",'|','\']
 	for character in input:
 		for char in specialCharacter:
 			if character==char:
